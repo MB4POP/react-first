@@ -5,17 +5,17 @@ import PropTypes from 'prop-types';
 
 class Creator extends React.Component {
   static propTypes = {
-    text: PropTypes.string,
-    action: PropTypes.string,
+    text: PropTypes.string, 
+    action: PropTypes.func,    
   }
 
   static defaultProps = {
-    text: 'Add new item',
+    text: 'Add new item',    
   }
 
   state = {
     value: '',
-    visibleButtons: false,
+    visibleButtons: false,       
   }
 
   handleChange(event){
