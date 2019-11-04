@@ -1,10 +1,11 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
-import Card from "../Card/Card";
-import Creator from "../Creator/Creator";
+import Card from '../Card/Card';
+import Creator from '../Creator/Creator';
 import {settings} from '../../data/dataStore';
-import Icon from "../Icon/Icon";
+import Icon from '../Icon/Icon';
 
 class Column extends React.Component {
   static propTypes = {
@@ -12,7 +13,7 @@ class Column extends React.Component {
     icon: PropTypes.string,
     cards: PropTypes.array,
   };
-
+  
   state = {
     title: this.props.title || [],
     cards: this.props.cards || [],
@@ -41,15 +42,15 @@ class Column extends React.Component {
   addCard(title){
     console.log(this.state.cards);
     this.setState(state => (
-        {
-          cards: [
-            ...state.cards,
-            {
-              key: state.cards.length ? state.cards[state.cards.length-1].key + 1 : 0,
-              title,
-            }
-          ]
-        }
+      {
+        cards: [
+          ...state.cards,
+          {
+            key: state.cards.length ? state.cards[state.cards.length-1].key + 1 : 0,
+            title,
+          },
+        ],
+      }
     ));
   }
 }

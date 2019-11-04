@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
@@ -15,6 +16,7 @@ class List extends React.Component {
 
   static propTypes = {
     title: PropTypes.node.isRequired,
+    image: PropTypes.node,
     description: PropTypes.node,
     columns: PropTypes.array,      
   }
@@ -32,9 +34,9 @@ class List extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   } 
@@ -43,7 +45,7 @@ class List extends React.Component {
     return (
       <section className={styles.component}>        
         <Hero titleText={this.props.title} 
-        heroImage={this.props.image} /> 
+          heroImage={this.props.image} /> 
         <div className={styles.description}>
           {ReactHtmlParser(this.props.description)}
         </div>  
