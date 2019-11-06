@@ -6,7 +6,7 @@ import Column from '../Column/ColumnContainer.js';
 import PropTypes from 'prop-types';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
-//import Creator from '../Creator/Creator.js';
+import Creator from '../Creator/Creator.js';
 
 class List extends React.Component {
 
@@ -14,7 +14,8 @@ class List extends React.Component {
     title: PropTypes.node.isRequired,
     image: PropTypes.node,
     description: PropTypes.node,
-    columns: PropTypes.array,      
+    columns: PropTypes.array, 
+    addColumn: PropTypes.func,     
   }
 
   static defaultProps = {
@@ -22,7 +23,7 @@ class List extends React.Component {
   }  
  
   render() {
-    const {title, image, description, columns} = this.props;
+    const {title, image, description, columns, addColumn} = this.props;
     return (
       <section className={styles.component}>        
         <Hero titleText={title} 
@@ -34,12 +35,10 @@ class List extends React.Component {
           {columns.map(columnData => (
             <Column key={columnData.id} {...columnData} />
           ))}
-        </div> 
-        {/* 
+        </div>         
         <div className={styles.creator}>
-          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
-        </div>
-        */}   
+          <Creator text={settings.columnCreatorText} action={addColumn}/>
+        </div>          
       </section>
     );
   }
