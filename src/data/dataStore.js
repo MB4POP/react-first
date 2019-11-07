@@ -14,6 +14,18 @@ export const settings = {
   defaultColumnIcon: 'list-alt',
 };
 
+export const infoPage = {
+  title: 'Info',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  content: 'This is info subpage',
+};
+
+export const faqPage = {
+  title: 'Faq',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  content: 'This is faq subpage',
+};
+
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
