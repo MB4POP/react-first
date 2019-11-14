@@ -91,6 +91,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Things to do <sup>latter</sup>',
+    description: 'Visit grantparents in mountains',
+    image: 'https://cdn.pixabay.com/photo/2019/11/10/16/47/nature-4616282__340.jpg',
+  },
+  {
+    id: 'list-3',
+    title: 'Things to do <sup>maybe</sup>',
+    description: 'Visit North Pole',
+    image: 'https://cdn.pixabay.com/photo/2019/11/07/14/09/sky-4608972__340.jpg',
+  },
 ];
 
 const columns = [
